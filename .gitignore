@@ -1,0 +1,23 @@
+
+--In case change ssh key pair value. Present value in nothing.
+Udits-Air:desktop uditsharma$ cd etl_checks
+Udits-Air:etl_checks uditsharma$  ssh-keygen -t rsa -b 4096 -C "mma400@uclive.ac.nz"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/uditsharma/.ssh/id_rsa): 
+/Users/uditsharma/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Udits-Air:etl_checks uditsharma$ pbcopy < ~/.ssh/id_rsa.pub
+Udits-Air:etl_checks uditsharma$ git remote -v
+origin	git@github.com:Megha219105/etl_checks.git (fetch)
+origin	git@github.com:Megha219105/etl_checks.git (push)
+Udits-Air:etl_checks uditsharma$ git push -u origin master
+
+
+git add .
+git commit
+git remote -v
+git push -u origin master
+
+
